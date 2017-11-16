@@ -1,7 +1,7 @@
 <?php
 
   /*Classe pour se connecter à la base de donnée et agir dessus*/
-  class acces_bd{
+  class authentification_bd{
 
     private $connexion;
 
@@ -10,7 +10,6 @@
         $chaine="mysql:host=localhost;dbname=E164708F";
         $this->connexion = new PDO($chaine,"E164708F","E164708F");
         $this->connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-        echo "c bon";
        }
        catch(PDOException $e){
          print($e->getMessage());
@@ -26,10 +25,13 @@
 
           $tabRes = $stmt->fetch();
           if (isset($tabRes[0])) {
-            return true;
+            if ($tabRes[0] == $mdp) {
+              return true;
+            }
           }
-          return false;
+
         }
+        return false;
       }
       catch(PDOException $e){
         print($e->getMessage());
@@ -37,15 +39,3 @@
     }
 
   }
- ?>
-<!--
-<html>
-<body>
-  <p>test</p>
-  <?php/*
-  $bd = new acces_bd();
-  */
-  ?>
-</body>
-</html>
--->
