@@ -16,7 +16,7 @@
        }
     }
 
-    public function verifieAuthentification($login, $mdp){
+    public function Etudiant($login, $mdp){
       try{
         if (isset($login) and isset($mdp)) {
           $stmt = $this->connexion->prepare('SELECT mdp from Professeur where login=?');
