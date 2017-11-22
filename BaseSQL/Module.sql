@@ -26,12 +26,9 @@ SET time_zone = "+00:00";
 -- Structure de la table `Absence`
 --
 
-CREATE TABLE IF NOT EXISTS `Absence` (
-  `idEtu` int(11) NOT NULL,
-  `logProf` varchar(40) NOT NULL,
-  `date` date NOT NULL,
-  `creneau` time NOT NULL,
-  `justifié` tinyint(1) NOT NULL
+CREATE TABLE IF NOT EXISTS `Module` (
+  `id` varchar(30) NOT NULL,
+  `nom` varchar(80) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -41,8 +38,8 @@ CREATE TABLE IF NOT EXISTS `Absence` (
 --
 -- Index pour la table `Absence`
 --
-ALTER TABLE `Absence`
-  ADD KEY `idEtu` (`idEtu`), ADD KEY `logProf` (`logProf`);
+ALTER TABLE `Module`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Contraintes pour les tables exportées
@@ -51,10 +48,6 @@ ALTER TABLE `Absence`
 --
 -- Contraintes pour la table `Absence`
 --
-ALTER TABLE `Absence`
-ADD CONSTRAINT `Absence_ibfk_2` FOREIGN KEY (`logProf`) REFERENCES `Professeur` (`login`),
-ADD CONSTRAINT `Absence_ibfk_1` FOREIGN KEY (`idEtu`) REFERENCES `Etudiant` (`id`);
-
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
