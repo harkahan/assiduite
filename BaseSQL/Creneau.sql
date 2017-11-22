@@ -42,8 +42,8 @@ CREATE TABLE IF NOT EXISTS `Creneau` (
 --
 -- Index pour la table `Absence`
 --
-ALTER TABLE `Absence`
-  ADD PRIMARY KEY (`idCreneau`), ADD KEY `groupe` (`groupe`);
+ALTER TABLE `Creneau`
+  ADD PRIMARY KEY (`idCreneau`), ADD KEY `groupe_Creneau` (`groupe`), ADD KEY `prof_Creneau` (`prof`), ADD KEY `module_Creneau` (`module`);
 
 --
 -- Contraintes pour les tables exportées
@@ -52,9 +52,10 @@ ALTER TABLE `Absence`
 --
 -- Contraintes pour la table `Absence`
 --
-ALTER TABLE `Absence`
-ADD CONSTRAINT `Absence_ibfk_2` FOREIGN KEY (`logProf`) REFERENCES `Professeur` (`login`),
-ADD CONSTRAINT `Absence_ibfk_1` FOREIGN KEY (`idEtu`) REFERENCES `Etudiant` (`id`);
+ALTER TABLE `Creneau`
+ADD CONSTRAINT `Creneau_ibfk_3` FOREIGN KEY (`module`) REFERENCES `Module` (`id`),
+ADD CONSTRAINT `Creneau_ibfk_2` FOREIGN KEY (`prof`) REFERENCES `Professeur` (`login`),
+ADD CONSTRAINT `Creneau_ibfk_1` FOREIGN KEY (`groupe`) REFERENCES `Groupe` (`Numero`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

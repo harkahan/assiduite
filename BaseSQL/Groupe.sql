@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `Groupe` (
   `Annee` int(11) NOT NULL,
-  `Numero` int(11) NOT NULL,
+  `Numero` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --

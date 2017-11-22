@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `Professeur` (
   `login` varchar(30) NOT NULL,
   `mdp` varchar(30) NOT NULL,
   `nom` varchar(30) NOT NULL,
-  `prenom` varchar(30) NOT NULL,
+  `prenom` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
