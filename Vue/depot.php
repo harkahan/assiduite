@@ -2,6 +2,10 @@
 <html lang="fr_FR">
 <!--Version 1.00-->
 
+<?php
+session_start();
+?>
+
 <head>
     <title></title>
     <meta charset="UTF-8">
@@ -17,13 +21,13 @@
                 <a class="nav-link" href="../index.html">Accueil</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="depot.html">Dépôt</a>
+                <a class="nav-link" href="depot.php">Dépôt</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="consultation.html">Consultation</a>
+                <a class="nav-link" href="consultation.php">Consultation</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="gestion.html">Gestion</a>
+                <a class="nav-link" href="gestion.php">Gestion</a>
             </li>
         </ul>
     </nav>
