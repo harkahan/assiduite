@@ -3,7 +3,7 @@
 <!--Version 1.00-->
 
 <head>
-    <title>Connexion au service </title>
+    <title>Connexion au service</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css" crossorigin="anonymous">
