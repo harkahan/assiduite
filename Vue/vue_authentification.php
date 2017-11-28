@@ -16,9 +16,9 @@ class vue_authentification {
         <h1>Connexion au service</h1>
         <form action="index.php" method="post">
             Identifiant :
-            <input type="text" name="identifiant" value=""><br />
+            <input type="text" name="identifiant" value=""><br /><br />
             Mot de passe :
-            <input type="password" name="password" value=""><br />
+            <input type="password" name="password" value=""><br /><br />
             <input type="submit" value="Connexion">
         </form>
     </body>
