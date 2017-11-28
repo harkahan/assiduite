@@ -1,6 +1,6 @@
 <?php
 require_once PATH_VUE."/vue_authentification.php";
-require_once PATH_MODELE."/modele.php";
+require_once PATH_MODELE."/modele_authentification_bd.php";
 
 
 class ControleurAuthentification{
@@ -17,16 +17,15 @@ $this->modeleAuthentification=new modele_authentification_bd();
 }
 
 function accueil(){
-$this->vue_authentification->afficherVue();
+$this->vueAuthentification->afficherVue();
 }
 
-function verifiePseudo($pseudo){
-  if ($this->modele->exists($pseudo)) {
-    $_SESSION["pseudo"] = $pseudo;
-    $this->vue->salon( $this->modele->get10RecentMessage());
+function verifieConnexion($pseudo, $password){
+  if ($this->modeleAuthentification->verifieAuthentification($pseudo, $password)) {
+    echo "ok";
   }
   else{
-    $this->vue->demandePseudo();
+    $this->vueAuthentification->afficherVue();
   }
 }
 

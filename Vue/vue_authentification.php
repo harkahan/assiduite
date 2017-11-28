@@ -1,7 +1,7 @@
 <?php
 
 class vue_authentification {
-  private function afficherVue() {
+  public function afficherVue() {
     ?>
     <!DOCTYPE html>
     <html lang="fr_FR">
@@ -31,7 +31,7 @@ class vue_authentification {
             </ul>
         </nav>
         <h2>Connexion au service</h2>
-        <form action="../index.php" method="post">
+        <form action="index.php" method="post">
             Identifiant :
             <input type="text" name="identifiant" value=""><br />
             Mot de passe :

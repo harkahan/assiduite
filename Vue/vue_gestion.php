@@ -1,7 +1,7 @@
 <?php
 
 class vue_gestion {
-  private function afficherVue() {
+  public function afficherVue() {
     ?>
 
     <!DOCTYPE html>
@@ -39,7 +39,7 @@ class vue_gestion {
     </body>
 
     </html>
-    
+
     <?php
   }
 }
