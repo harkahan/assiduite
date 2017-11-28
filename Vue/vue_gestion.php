@@ -1,7 +1,7 @@
 <?php
 
 class vue_gestion {
-  private function afficherVue() {
+  public function afficherVue() {
     ?>
 
     <!DOCTYPE html>

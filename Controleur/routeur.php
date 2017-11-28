@@ -1,21 +1,14 @@
 <?php
 
-require_once 'controleurAuthentification.php';
-require_once 'controleurNouveauMessage.php';
-
+require_once 'controleur_authentification.php';
 
 class Routeur {
 
   private $ctrlAuthentification;
-  private $ctrlNouveauMessage;
-  private $modeleBD;
-
-
 
 
   public function __construct() {
     $this->ctrlAuthentification= new ControleurAuthentification();
-    $this->ctrlNouveauMessage= new ControleurNouveauMessage();
   }
 
   // Traite une requête entrante

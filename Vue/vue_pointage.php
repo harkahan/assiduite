@@ -2,7 +2,7 @@
 
 class vue_pointage {
 
-  private function afficherVue() {
+  public function afficherVue() {
 
     ?>
 
