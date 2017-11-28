@@ -7,8 +7,8 @@
 
     public function __construct(){
       try{
-        $chaine="mysql:host=localhost;dbname=E164708F";
-        $this->connexion = new PDO($chaine,"E164708F","E164708F");
+        $chaine="mysql:host=".HOST.";dbname=".BD;
+        $this->connexion = new PDO($chaine,LOGIN,PASSWORD);
         $this->connexion->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
        }
        catch(PDOException $e){
