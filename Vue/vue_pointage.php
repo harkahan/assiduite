@@ -2,7 +2,7 @@
 
 class vue_pointage {
 
-  public function afficherVue() {
+  public function afficherVue($etudiant) {
 
     ?>
 
@@ -42,22 +42,22 @@ class vue_pointage {
         <div class="row">
             <!--SELECTION GROUPE ET MATIERE-->
             <div class="col card text-centers">
-                <p>Cours</p>
-                <form action="">
-                    <p>Selectionner un groupe :</p>
-                    <select name="groupe">
-                        <option value="">groupe 1</option>
-                        <option value="">groupe 2</option>
-                        <option value="">groupe 3</option>
-                        <option value="">groupe 4</option>
+                  <p>Cours</p>
+                  <form action="index.php" method="post">
+                      <p>Selectionner un groupe :</p>
+                      <select name="groupe">
+                          <option value="">groupe 1</option>
+                          <option value="">groupe 2</option>
+                          <option value="">groupe 3</option>
+                          <option value="">groupe 4</option>
                       </select>
-                    <p>Selectionner une matière :</p>
-                    <select name="matiere">
-                            <option value="">matiere 1</option>
-                            <option value="">matiere 2</option>
-                            <option value="">matiere 3</option>
-                            <option value="">matiere 4</option>
-                    </select>
+                      <p>Selectionner une matière :</p>
+                      <select name="matiere">
+                          <option value="">matiere 1</option>
+                          <option value="">matiere 2</option>
+                          <option value="">matiere 3</option>
+                          <option value="">matiere 4</option>
+                        </select>
                 </form>
             </div>
             <!--SELECTION ABSENTS-->
