@@ -10,14 +10,14 @@ private $modeleAuthentification;
 
 
 function __construct(){
-$this->vue=new Vue();
-$this->modele=new Modele();
+$this->vueAuthentification=new vue_authentification();
+$this->modeleAuthentification=new modele_authentification_bd();
 
 
 }
 
 function accueil(){
-$this->vue->demandePseudo();
+$this->vue_authentification->afficherVue();
 }
 
 function verifiePseudo($pseudo){
