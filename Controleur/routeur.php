@@ -21,13 +21,10 @@ class Routeur {
   // Traite une requête entrante
   public function routerRequete() {
 
-  /*  if (isset($_POST["pseudo"])) {
-      $this->ctrlAuthentification->verifiePseudo($_POST["pseudo"]);
+    if (isset($_POST["identifiant"]) && isset($_POST["password"])) {
+      $this->ctrlAuthentification->verifieConnexion($_POST["identifiant"], $_POST["password"]);
      }
-    else if (isset()) {
-     $this->ctrlNouveauMessage->nouveauMessage($_POST["message"]);
-   }
-    else {*/$this->ctrlAuthentification->accueil();//}
+    else {$this->ctrlAuthentification->accueil();}
  }
 
 

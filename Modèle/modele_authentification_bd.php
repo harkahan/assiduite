@@ -1,7 +1,7 @@
 <?php
 
   /*Classe pour se connecter à la base de donnée et agir dessus*/
-  class authentification_bd{
+  class modele_authentification_bd{
 
     private $connexion;
 
