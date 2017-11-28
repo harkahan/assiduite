@@ -7,4 +7,8 @@
   define("PATH_MODELE", HOME_SITE . "/Modele");
   define("PATH_BASESQL", HOME_SITE . "/BaseSQL");
 
+  define("HOST","localhost");
+  define("BD","assidIUT2017");
+  define("LOGIN","assidIUT2017");
+  define("PASSWORD","assidIUT2017");
 ?>
