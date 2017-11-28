@@ -13,24 +13,7 @@ class vue_authentification {
     </head>
 
     <body>
-        <h1>Assiduité</h1>
-        <nav>
-            <ul>
-                <li>
-                    <a href="../index.html">Accueil</a>
-                </li>
-                <li>
-                    <a href="vue_pointage.php">Pointage absences</a>
-                </li>
-                <li>
-                    <a href="vue_consultation.php">Consultation absences</a>
-                </li>
-                <li>
-                    <a href="vue_gestion.php">Gestion absences</a>
-                </li>
-            </ul>
-        </nav>
-        <h2>Connexion au service</h2>
+        <h1>Connexion au service</h1>
         <form action="index.php" method="post">
             Identifiant :
             <input type="text" name="identifiant" value=""><br />
