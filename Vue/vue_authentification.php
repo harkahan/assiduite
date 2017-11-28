@@ -15,18 +15,18 @@
                 <a href="../index.html">Accueil</a>
             </li>
             <li>
-                <a href="depot.php">Dépôt</a>
+                <a href="vue_pointage.php">Pointage absences</a>
             </li>
             <li>
-                <a href="consultation.php">Consultation</a>
+                <a href="vue_consultation.php">Consultation absences</a>
             </li>
             <li>
-                <a href="gestion.php">Gestion</a>
+                <a href="vue_gestion.php">Gestion absences</a>
             </li>
         </ul>
     </nav>
     <h2>Connexion au service</h2>
-    <form action="../Controleur/Authentification.php" method="post">
+    <form action="../Controleur/controleur_authentification.php" method="post">
         Identifiant :
         <input type="text" name="identifiant" value=""><br />
         Mot de passe :

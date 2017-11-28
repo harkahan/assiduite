@@ -7,27 +7,25 @@ session_start();
 ?>
 
 <head>
-    <title></title>
+    <title>Pointage absences</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css" crossorigin="anonymous">
 </head>
 
-<body class="text-center">
+<body>
     <h1>Service Assiduité IUT</h1>
-    <nav class="navbar navbar-expand-sm bg-light navbar-light">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="../index.html">Accueil</a>
+    <nav>
+        <ul>
+            <li>
+                <a href="../index.html">Accueil</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="depot.php">Dépôt</a>
+            <li>
+                <a href="vue_pointage.php">Pointage absences</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="consultation.php">Consultation</a>
+            <li>
+                <a href="vue_consultation.php">Consultation absences</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="gestion.php">Gestion</a>
+            <li >
+                <a href="vue_gestion.php">Gestion absences</a>
             </li>
         </ul>
     </nav>
