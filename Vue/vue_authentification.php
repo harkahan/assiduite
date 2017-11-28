@@ -3,6 +3,7 @@
 class vue_authentification {
   private function afficherVue() {
     ?>
+    
     <!DOCTYPE html>
     <html lang="fr_FR">
     <!--Version 1.00-->

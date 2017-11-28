@@ -39,7 +39,7 @@ class vue_gestion {
     </body>
 
     </html>
-    
+
     <?php
   }
 }
