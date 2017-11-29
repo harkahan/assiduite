@@ -10,10 +10,6 @@ class vue_pointage {
     <html lang="fr_FR">
     <!--Version 1.00-->
 
-    <?php
-    session_start();
-    ?>
-
     <head>
         <title>Pointage absences</title>
         <meta charset="UTF-8">
@@ -43,25 +39,20 @@ class vue_pointage {
             <!--SELECTION GROUPE ET MATIERE-->
             <div class="col card text-centers">
                   <p>Cours</p>
-                  <form action="index.php" method="post">
+                <form action="index.php" method="post">
                       <p>Selectionner un groupe :</p>
                       <select name="groupe">
-                          <option value="">groupe 1</option>
-                          <option value="">groupe 2</option>
-                          <option value="">groupe 3</option>
-                          <option value="">groupe 4</option>
+                          <option value="1">Groupe 1</option>
+                          <option value="2">Groupe 2</option>
+                          <option value="3">Groupe 3</option>
+                          <option value="4">Groupe 4</option>
                       </select>
-                      <p>Selectionner une matière :</p>
-                      <select name="matiere">
-                          <option value="">matiere 1</option>
-                          <option value="">matiere 2</option>
-                          <option value="">matiere 3</option>
-                          <option value="">matiere 4</option>
-                        </select>
+                      <input type="submit" value="Valider"/>
                 </form>
             </div>
             <!--SELECTION ABSENTS-->
             <div class="col card" style="height:100%;">
+              <?php if ($etudiant != null) {?>
                 <form action="">
                     <table class="table table-striped">
                         <thead>
@@ -70,42 +61,15 @@ class vue_pointage {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td><input type="checkbox" name="" value="id1"> ETU1<br></td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" name="" value="id1"> ETU1<br></td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" name="" value="id1"> ETU1<br></td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" name="" value="id1"> ETU1<br></td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" name="" value="id1"> ETU1<br></td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" name="" value="id1"> ETU1<br></td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" name="" value="id1"> ETU1<br></td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" name="" value="id1"> ETU1<br></td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" name="" value="id1"> ETU1<br></td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" name="" value="id1"> ETU1<br></td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" name="" value="id1"> ETU1<br></td>
-                            </tr>
+                            <?php foreach ($etudiant as $key): ?>
+                              <tr>
+                                <td><?php echo $key["nom"]." ".["prenom"] ?></td>
+                              </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </form>
+                <?php }?>
             </div>
             <!--VALIDATION DES DONNEES-->
             <div class="col card">

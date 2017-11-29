@@ -1,7 +1,7 @@
 <?php
 
   /*Classe pour se connecter à la base de donnée et agir dessus*/
-  class authentification_bd{
+  class modele_gerer_bd{
 
     private $connexion;
 
@@ -16,22 +16,13 @@
        }
     }
 
-    public function Etudiant($login, $mdp){
+    public function getEtudiant($groupe){
       try{
-        if (isset($login) and isset($mdp)) {
-          $stmt = $this->connexion->prepare('SELECT mdp from Professeur where login=?');
-          $stmt->bindParam(1, $login);
+          $stmt = $this->connexion->prepare('SELECT nom, prenom from Etudiant where groupe=?');
+          $stmt->bindParam(1, $groupe);
           $stmt->execute();
 
-          $tabRes = $stmt->fetch();
-          if (isset($tabRes[0])) {
-            if ($tabRes[0] == $mdp) {
-              return true;
-            }
-          }
-
-        }
-        return false;
+          return $stmt->fetchAll(PDO::FETCH_ASSOC);
       }
       catch(PDOException $e){
         print($e->getMessage());
