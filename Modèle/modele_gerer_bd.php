@@ -22,7 +22,8 @@
           $stmt->bindParam(1, $groupe);
           $stmt->execute();
 
-          return $stmt->fetchAll(PDO::FETCH_ASSOC);
+          $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+          return $result;
       }
       catch(PDOException $e){
         print($e->getMessage());

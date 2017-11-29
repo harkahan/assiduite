@@ -61,11 +61,13 @@ class vue_pointage {
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($etudiant as $key): ?>
-                              <tr>
-                                <td><?php echo $key["nom"]." ".["prenom"] ?></td>
-                              </tr>
-                            <?php endforeach; ?>
+                            <?php  foreach ($etudiant as $row){
+                              ?><tr>
+                                  <td>
+                                    <?php echo $row['nom']." ".$row['prenom'];?>
+                                  </td>
+                                </tr>
+                            <?php } ?>
                         </tbody>
                     </table>
                 </form>
