@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `Absence` (
   `idEtu` int(11) NOT NULL,
-  `idCreneau` int(11) NOT NULL,
+  `idCreneau` time NOT NULL,
   `justificatif` varchar(30)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
