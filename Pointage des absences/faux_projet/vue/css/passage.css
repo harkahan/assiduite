@@ -1,0 +1,154 @@
+body {
+  text-align: center;
+  background-image: url('../image/fond.jpeg');
+  background-repeat:no-repeat;
+  background-size: cover;
+  color: black;
+  font-family: Verdana, Geneva, sans-serif;
+  background-color: #CAD8D8;
+  height: 100%;
+}
+
+form {
+  position: relative;
+  width: 60%;
+  height: 75%;
+  margin: auto;
+  border: 3px solid white;
+  background-color: rgba(179, 224, 255, 0.4);
+}
+
+footer {
+  font-size: 10px;
+  position: fixed;
+  bottom: 0;
+}
+
+/* Modification des boutons pour les rendre plus agreables */
+/* Ici on cache le bouton de base*/
+
+input[type="radio"] {
+  display: none;
+}
+
+/* l'apparence du nouveau bouton */
+input[type="radio"] ~ label {
+  padding-left:35px;
+  height:32px; 
+  display:inline-block;
+  line-height:30px;
+  font-size:30px;
+  vertical-align:middle;
+  border-radius: 50px;
+  background-image: linear-gradient( white, rgba(255,255,255,0));
+  border-bottom: 2px solid red;
+  box-shadow: inset 0 -2px red;
+}
+
+/* A partir d'ici ce sont des modifications pour faciliter la selection sur tablette */
+input[type="submit"] {
+    background: #FFF;
+    border: solid black 1px;
+    text-align: center;
+}
+input[type="text"] {
+    background: #FFF;
+    margin-bottom: 15px;
+    text-align: center;
+}
+select, input {
+    border: 0px;
+    background: transparent;
+    height: 32px;
+    width: 200px;
+    line-height: 1px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    font-size: 20px;
+    overflow: hidden;
+    border-radius: 0px;
+    text-align: right;
+    display: inline-block;
+    position: relative;
+}
+option {
+  font-size: 20px;
+  text-align: right;
+}
+
+.titre_input{
+  border-radius: 0px;
+  background-color: #0096E6;
+  color: #FFF;
+  font-weight: bold;
+  padding: 8px 3px;
+  margin: 20px 0px;
+}
+.dropdown {
+  width: 100%;
+  margin-left: 20px;
+  overflow: hidden;
+  padding: 10px 10px 10px 10px;
+  background: url('../image/menu.png') no-repeat #fff 0px 50%;
+  background-size: 22%;
+  position: relative;
+}
+
+#formulaire {
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 0.4);
+
+}
+
+#donnees {
+  float : left;
+  margin-left: 12%;
+  margin-top: 5%;
+}
+
+#date {
+  float: right;
+  margin-right: 12%;
+  margin-top: 5%;
+}
+
+#final {
+  position: relative;
+  overflow: auto;
+  margin-top: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: center;
+}
+
+
+/* Fin des modifications pour tablette */
+
+/* Pour les écrans moins larges*/
+@media only screen and (max-width: 1600px) {
+
+form {
+  width: 100%;
+}
+
+.dropdown {
+  margin-left: 0px;
+}
+
+#formulaire {
+  background-color: transparent;
+}
+
+/* pour tablettes */
+@media only screen and (max-width: 1024px) {
+
+form {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+}

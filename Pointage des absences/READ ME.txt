@@ -1,0 +1,28 @@
+Vous pouvez lancer la version actuel de projet tutoré à l'url :
+ //infoweb/~sidi-presence
+
+ Vous pouvez récupérer les fichiers individuellement sur linux et windows
+ aux adresses respectives :
+ smb://infoweb/sidi-presence
+ \\infoweb\sidi-presence
+
+**************************
+Pour installer le faux Scodoc et le faux projet :
+
+1) Placer dans l'infoweb désiré le faux_Scodoc et le faux_projet dans le même dossier
+
+2) Créer une base de données sur phpMyAdmin avec les fichiers SQL fournit dans l'archive baseSQL.zip
+
+3) Placer au mois un tuple dans chaque table pour permettre le test.
+
+3) Dans le Faux Scodoc, partie modèle, sur les deux fichiers :
+  - remplacer les identifiants "XXX" par les identifiants de la base de données créée.
+      $chaine="mysql:host=localhost;dbname= XXX";
+      $this->connexion = new PDO($chaine,"XXX","XXX");
+
+4) L'installation est terminée.
+*******************************************************
+
+Pour lancer le faux_Scodoc ou le faux_projet :
+
+1) Lancer sur un navigateur l'url associée à l'index.php de l'application désirée.
