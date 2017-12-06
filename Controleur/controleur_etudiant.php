@@ -17,7 +17,24 @@ $this->modeleBD=new modele_gerer_bd();
 }
 
 function trouverEtudiant($groupe){
-    $this->vuePointage->afficherVue($this->modeleBD->getEtudiant($groupe));
+  $_SESSION["groupe"] = $groupe;
+    $this->vuePointage->afficherVue($this->modeleBD->getEtudiant($groupe), $this->modeleBD->getGroupes());
+}
+
+function pointerEtudiant($idEtu){
+  //TO DO Insertion absence
+  foreach ($idEtu as $absent) {
+    echo $absent;
+  }
+  $_SESSION["AbsenceCree"] = true;
+  $_SESSION["absents"] = $idEtu;
+  $this->vuePointage->afficherVue($this->modeleBD->getEtudiant($_SESSION["groupe"]), $this->modeleBD->getGroupes());
+
+
+
+
+
+
 }
 
 

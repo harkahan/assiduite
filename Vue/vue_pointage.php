@@ -2,7 +2,7 @@
 
 class vue_pointage {
 
-  public function afficherVue($etudiant) {
+  public function afficherVue($etudiant, $groupes) {
 
     ?>
 
@@ -33,7 +33,7 @@ class vue_pointage {
                 </li>
             </ul>
         </nav>
-        <p>Identifié en tant que : XXXXXX</p>
+        <p>Identifié en tant que : <?php echo $_SESSION["login"]?></p>
         <p>Affichage de la date ici</p>
         <div class="row">
             <!--SELECTION GROUPE ET MATIERE-->
@@ -42,10 +42,10 @@ class vue_pointage {
                 <form action="index.php" method="post">
                       <p>Selectionner un groupe :</p>
                       <select name="groupe">
-                          <option value="1">Groupe 1</option>
-                          <option value="2">Groupe 2</option>
-                          <option value="3">Groupe 3</option>
-                          <option value="4">Groupe 4</option>
+                        <?php  foreach ($groupes as $courant){
+                          ?>
+                          <option value="<?php echo $courant["Numero"] ?>" <?php if ($_SESSION["groupe"] == $courant["Numero"]) {echo "selected";}?>><?php echo "Groupe ".$courant["Numero"] ?></option>
+                        <?php } ?>
                       </select>
                       <input type="submit" value="Valider"/>
                 </form>
@@ -53,7 +53,7 @@ class vue_pointage {
             <!--SELECTION ABSENTS-->
             <div class="col card" style="height:100%;">
               <?php if ($etudiant != null) {?>
-                <form action="">
+                <form action="index.php" method="post">
                     <table class="table table-striped">
                         <thead>
                             <tr>
@@ -64,12 +64,13 @@ class vue_pointage {
                             <?php  foreach ($etudiant as $row){
                               ?><tr>
                                   <td>
-                                    <?php echo $row['nom']." ".$row['prenom'];?>
+                                    <input type="checkbox" name="idAbsent[]" value="<?php echo $row['id']?>"/><?php echo $row['nom']." ".$row['prenom'];?>
                                   </td>
                                 </tr>
                             <?php } ?>
                         </tbody>
                     </table>
+                    <input type="submit" value="Pointer Absent"/>
                 </form>
                 <?php }?>
             </div>
